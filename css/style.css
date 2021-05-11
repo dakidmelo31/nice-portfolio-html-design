@@ -1,0 +1,111 @@
+@charset "UTF-8";
+*
+{
+    scroll-behavior: smooth;
+    user-select: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: #9e03ff;
+}
+body
+{
+    background: #eaeaea44 url("../img/header.png") no-repeat top right;
+    background-size: 100%;
+}
+header.header
+ {
+     background: transparent url("../img/ring.png") no-repeat 34% 100%;
+     background-size: 10%;
+ }
+div.intro
+{
+    display: flex;
+    margin-top: 20rem;
+}
+div.intro *
+{
+    overflow-y: hidden;
+}
+div.intro > div
+{
+    flex-grow: 1;
+    min-height: 300px !important;
+}
+
+div.intro > div:first-of-type
+{
+    background: transparent url("img/repeat.png") no-repeat top left scroll;
+}
+.page
+{
+    margin-top: 110px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.tiles
+{
+    position: relative;
+    top: 16rem;
+    left: 2rem;
+    z-index: 3;
+}
+.services
+{
+    transition: .25s ease-out;
+    background: #fff;
+    padding: 35px 40px;
+    width: 330px;
+    min-height: 450px;
+    box-shadow: 1px 10px 10px 2px #aaaaaa13;
+}
+.services *
+{
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.services >img
+{
+    margin-bottom: 15px;
+}
+.services:hover
+{
+    box-shadow: 1px 15px 15px #9e03ff13;
+}
+.pbar
+{
+    width: 100%;
+    margin: 5px auto;
+    padding: 1px;
+    display: flex;
+    justify-content: flex-start;
+    background: #a1d5fc55;
+}
+.pbar .inner
+{
+    width: 95%;
+    padding: 2px;
+    background: rgb(0, 119, 255);
+}
+div.skills-items
+{
+    width: 350px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+div.skills-items:hover
+{
+    bottom: 5px;
+    left: 5px;
+    box-shadow: 3px 5px 15px #00000015;
+}

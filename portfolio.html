@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming with Javascript</title>
+</head>
+<body>
+<script>
+  function twoSums(nums, target)
+  {
+    for (var i = 0; i < nums.length; i++) {
+      for (var j = 0; j < nums.length; j++) {
+            if((nums[i] + nums[j]) === target)
+            {
+                document.write("found these: " + nums[i] + " and " + nums[j] + "<br>");
+                nums[i] = target +100;
+                nums[j] = target +100;
+            }
+      }
+    }
+/*
+    return document.write("inside the function with array values <strong>" +
+            nums +"</strong>"+ " <br>And the target Being <strong>" +
+            target +"</strong>");
+*/
+  }
+  var array = [2,3,54,22,4,5,77,23,12,16,17,19,22,25,28,33,37];
+  var target = 25;
+  twoSums(array, target);
+</script>
+</body>
+</html>
