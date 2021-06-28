@@ -1,0 +1,134 @@
+@charset "UTF-8";
+html
+{
+    scroll-behavior: smooth;
+}
+.backdrop-blur
+{
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+div.mobile
+{
+    display: none;
+}
+.mobile-menu-hider
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 500;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 10px 5px #00000022;
+    padding: 15px;
+}
+.mobile-menu-hider i:last-of-type
+{
+    color: #500072;
+}
+
+.mobile-menu-hider i
+{
+    transition: .2s ease;
+    cursor: pointer;
+}
+.mobile-menu-hider i:hover
+{
+    color: #000;
+}
+.mobile-menu-hider i:active,
+.mobile-menu-hider i:focus
+{
+    transform: scale(.8);
+}
+@media screen and (max-width:  1160px)
+{
+    nav.navbar
+    {
+        display: none;
+    }
+
+    ul.navbar li
+    {
+        margin: 0 10px;
+    }
+    div.mobile
+    {
+        z-index: 200;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        backdrop-filter: blur(6px);
+        transition: .5s ease-in-out;
+    }
+    .inner-mobile
+    {
+        height: 100%;
+        background: dodgerblue;
+        box-shadow: 0 15px 32px #00000033;
+        width: 350px;
+    }
+    .inner-mobile ul
+    {
+        height: inherit;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner-mobile ul li
+    {
+        width: 100%;
+    }
+    .inner-mobile ul li a
+    {
+        color: #fff;
+        text-align: center !important;
+        margin: 10px 0;
+        width: 90%;
+        transition: .25s ease-in-out;
+    }
+    .inner-mobile ul>  li:last-of-type > a:last-of-type:hover,
+    .inner-mobile ul>  li:first-of-type > a:first-of-type:hover
+    {
+        background: transparent;
+        box-shadow: unset;
+    }
+    .inner-mobile ul li a:hover
+    {
+        color: #000;
+        background: white;
+        box-shadow: 3px 3px 5px #00000022;
+    }
+    div.minimized-version
+    {
+        width: 100%;
+        height: 80px;
+        left: unset;
+        top: unset;
+        bottom: 0;
+        box-shadow: -5px 0 15px #00000055;
+    }
+
+    div.minimized-version .inner-mobile
+    {
+        width: 100%;
+    }
+    div.minimized-version *
+    {
+        flex-flow: row nowrap;
+    }
+}

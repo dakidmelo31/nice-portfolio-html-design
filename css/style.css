@@ -16,7 +16,7 @@
 }
 body
 {
-    background: #eaeaea44 url("../img/header.png") no-repeat top right;
+    background: #eaeaea44 url("../img/background.png") no-repeat top right !important;
     background-size: 100%;
 }
 header.header
